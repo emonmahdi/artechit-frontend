@@ -1,132 +1,117 @@
-import "./../styles/Header.css";
+import { useState, useEffect } from "react";
 
-const Header = () => {
+const Navbar = () => {
+  const [isSticky, setIsSticky] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div>
-      {/* <!-- Header Area --> */}
-      <header className="header">
-        {/* <!-- Topbar --> */}
-        <div className="topbar">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-6 col-md-5 col-12">
-                {/* <!-- Contact --> */}
-                <ul className="top-link">
-                  <li>
-                    <a href="#">About</a>
-                  </li>
-                  <li>
-                    <a href="#">Doctors</a>
-                  </li>
-                  <li>
-                    <a href="#">Contact</a>
-                  </li>
-                  <li>
-                    <a href="#">FAQ</a>
-                  </li>
-                </ul>
-                {/* <!-- End Contact --> */}
-              </div>
-              <div className="col-lg-6 col-md-7 col-12">
-                {/* <!-- Top Contact --> */}
-                <ul className="top-contact">
-                  <li>
-                    <i className="fa fa-phone"></i>+880 1234 56789
-                  </li>
-                  <li>
-                    <i className="fa fa-envelope"></i>
-                    <a href="mailto:support@yourmail.com">
-                      support@yourmail.com
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* <!-- End Topbar -->
-			<!-- Header Inner --> */}
-        <div className="header-inner">
-          <div className="container">
-            <div className="inner">
-              <div className="row">
-                <div className="col-lg-3 col-md-3 col-12">
-                  {/* <!-- Start Logo --> */}
-                  <div className="logo">
-                    <a href="index.html">
-                      <img src="img/logo.png" alt="#" />
-                    </a>
-                  </div>
-                  {/* <!-- End Logo -->
-								<!-- Mobile Nav --> */}
-                  <div className="mobile-nav"></div>
-                  {/* <!-- End Mobile Nav --> */}
-                </div>
-                <div className="col-lg-7 col-md-9 col-12">
-                  {/* <!-- Main Menu --> */}
-                  <div className="main-menu">
-                    <nav className="navigation">
-                      <ul className="nav menu">
-                        <li className="active">
-                          <a href="#">
-                            Home <i className="icofont-rounded-down"></i>
-                          </a>
-                          <ul className="dropdown">
-                            <li>
-                              <a href="index.html">Home Page 1</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">Doctos </a>
-                        </li>
-                        <li>
-                          <a href="#">Services </a>
-                        </li>
-                        <li>
-                          <a href="#">
-                            Pages <i className="icofont-rounded-down"></i>
-                          </a>
-                          <ul className="dropdown">
-                            <li>
-                              <a href="404.html">404 Error</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="#">
-                            Blogs <i className="icofont-rounded-down"></i>
-                          </a>
-                          <ul className="dropdown">
-                            <li>
-                              <a href="blog-single.html">Blog Details</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li>
-                          <a href="contact.html">Contact Us</a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                  {/* <!--/ End Main Menu --> */}
-                </div>
-                <div className="col-lg-2 col-12">
-                  <div className="get-quote">
-                    <a href="appointment.html" className="btn">
-                      Book Appointment
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* End Header Inner   */}
-      </header>
-      {/* End Header Area   */}
-    </div>
+    <nav
+      className={`w-full bg-white shadow-md transition-all duration-300 z-50 ${
+        isSticky ? "fixed top-0 left-0" : "relative"
+      }`}
+    >
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <div className="text-2xl font-bold text-blue-500">PharmaLogo</div>
+
+        {/* Hamburger Menu */}
+        <button
+          className="md:hidden text-gray-700 focus:outline-none"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+
+        {/* Menu */}
+        <ul
+          className={`md:flex md:space-x-6 absolute md:static top-full left-0 w-full bg-white md:bg-transparent shadow-lg md:shadow-none transition-all duration-300 ${
+            isMenuOpen ? "block" : "hidden"
+          }`}
+        >
+          <li className="relative group">
+            <a
+              href="#"
+              className="block px-4 py-2 text-gray-700 hover:text-blue-500 md:inline"
+            >
+              Home
+            </a>
+          </li>
+
+          <li className="relative group">
+            <a
+              href="#"
+              className="block px-4 py-2 text-gray-700 hover:text-blue-500 md:inline"
+            >
+              Products
+            </a>
+            <ul className="absolute left-0 top-full mt-2 hidden w-40 bg-white shadow-lg group-hover:block">
+              <li className="border-b hover:bg-blue-100">
+                <a href="#" className="block px-4 py-2 text-gray-700">
+                  Medicine
+                </a>
+              </li>
+              <li className="border-b hover:bg-blue-100">
+                <a href="#" className="block px-4 py-2 text-gray-700">
+                  Supplements
+                </a>
+              </li>
+              <li className="hover:bg-blue-100">
+                <a href="#" className="block px-4 py-2 text-gray-700">
+                  Equipment
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li className="relative group">
+            <a
+              href="#"
+              className="block px-4 py-2 text-gray-700 hover:text-blue-500 md:inline"
+            >
+              About
+            </a>
+          </li>
+
+          <li className="relative group">
+            <a
+              href="#"
+              className="block px-4 py-2 text-gray-700 hover:text-blue-500 md:inline"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;
