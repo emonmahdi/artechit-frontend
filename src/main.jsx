@@ -7,10 +7,12 @@ import Home from "./pages/Home/Home.jsx";
 import Login from "./pages/Login/Login.jsx";
 import AboutUs from "./pages/AboutUs/AboutUs.jsx";
 import Navbar from "./shared/Navbar.jsx";
+import TopNavbar from './component/TopNavbar.jsx';
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
+    <TopNavbar />
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />
