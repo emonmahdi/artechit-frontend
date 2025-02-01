@@ -1,9 +1,10 @@
 import TopNavbar from "../../component/TopNavbar";
+import Slider from "../../component/ui/Slider";
 
 const Home = () => {
   return (
     <>
-  
+    <Slider />
     <div className="min-h-screen bg-gray-50 p-6">
       <div className="max-w-4xl mx-auto bg-white p-8 shadow-md rounded-lg">
         <h1 className="text-3xl font-semibold text-gray-800 mb-6">

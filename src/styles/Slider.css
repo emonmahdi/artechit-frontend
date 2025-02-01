@@ -1,0 +1,77 @@
+.slider-banner { 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; 
+  
+    /* z-index: -10; */
+  }
+  .banner1{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://shorturl.at/nLzSI");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;  
+  }
+  .banner2{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://shorturl.at/qHAWI");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .banner3{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://shorturl.at/8kt0v");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .banner4{
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://media.istockphoto.com/id/1339686801/photo/cloud-computing.jpg?s=2048x2048&w=is&k=20&c=NKi1-84KT0XpLKfN1-a6XX7Lp_mS54yz6n8KIrkCrko=");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+  }
+  .hero-area {
+    text-align: center;
+  }
+  .hero-area h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .hero-area p {
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  .hero-area button {
+    border: none;
+    background-color: #60c2a4;
+    padding: 10px 30px;
+    border-radius: 10px;
+  }
+  .hero-area button:hover {
+    background-color: #020a0e;
+    color: #fff;
+  }
+  
+  @media (max-width: 420px) {
+    .slider-banner {
+      height: 130vh;
+    }
+    .hero-area h1 {
+      font-size: 30px;
+    }
+    .hero-area p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+  }
