@@ -9,9 +9,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./../../styles/Slider.css";
 
- 
-
-// import required modules
+ // import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
 
 export default function Slider() {
@@ -35,9 +33,11 @@ export default function Slider() {
       >
         <SwiperSlide>
           <div className="slider-banner banner1">
+            
             <div className="hero-area">
+            <h2 className="mb-3">Welcome To <span className="text-green-700 font-bold">ARTECHIT</span> </h2>
               <h1 className="text-5xl font-bold">
-                There is Now Way to Become a Internet Expert 0
+              Unlock Your Potential with Expert IT Training
               </h1>
               <p>Now a Days Internet Is a Useful Thing, Not Passion</p>
               <button>GET More</button>

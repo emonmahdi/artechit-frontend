@@ -41,7 +41,8 @@
     width: 100%;
   }
   .hero-area {
-    text-align: center;
+    text-align: left;
+    padding: 0;
   }
   .hero-area h1 {
     font-size: 40px;

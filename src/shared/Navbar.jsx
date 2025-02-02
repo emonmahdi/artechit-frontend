@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import logo from './../assets/logo.png'
+
 const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,8 +30,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold text-blue-500 w-full">
-          <Link to="/">AR Tech IT</Link>
+        <div className="font-bold text-blue-500 w-full">
+          <Link to="/">
+            <img src={logo}   style={{width:'100px', height:'50px'}} />
+          </Link>
         </div>
 
         {/* Hamburger Menu */}
