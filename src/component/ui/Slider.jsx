@@ -56,7 +56,10 @@ export default function Slider() {
                 There is Now Way to Become a Internet Expert 1
               </h1>
               <p>Now a Days Internet Is a Useful Thing, Not Passion</p>
-              <button>GET More</button>
+              <div className="flex items-center gap-4">
+                 <Button children={'Course Details'} /> 
+                 <Button children={'Contact US'} /> 
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -67,7 +70,10 @@ export default function Slider() {
                 There is Now Way to Become a Internet Expert 2
               </h1>
               <p>Now a Days Internet Is a Useful Thing, Not Passion</p>
-              <button>GET More</button>
+              <div className="flex items-center gap-4">
+                 <Button children={'Course Details'} /> 
+                 <Button children={'Contact US'} /> 
+              </div>
             </div>
           </div>
         </SwiperSlide>
@@ -78,7 +84,10 @@ export default function Slider() {
                 There is Now Way to Become a Internet Expert 3
               </h1>
               <p>Now a Days Internet Is a Useful Thing, Not Passion</p>
-              <button>GET More</button>
+              <div className="flex items-center gap-4">
+                 <Button children={'Course Details'} /> 
+                 <Button children={'Contact US'} /> 
+              </div>
             </div>
           </div>
         </SwiperSlide>
