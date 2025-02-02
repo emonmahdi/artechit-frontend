@@ -1,4 +1,5 @@
 import TopNavbar from "../../component/TopNavbar";
+import Button from "../../component/ui/Button";
 import Slider from "../../component/ui/Slider";
 
 const Home = () => {
@@ -10,6 +11,7 @@ const Home = () => {
         <h1 className="text-3xl font-semibold text-gray-800 mb-6">
           Welcome to Our Website
         </h1>
+        <Button children={'Go To Course'} /> 
 
         <p className="text-lg text-gray-700 mb-4">Body Content</p>
 

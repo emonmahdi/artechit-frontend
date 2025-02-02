@@ -9,8 +9,9 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "./../../styles/Slider.css";
 
- // import required modules
+// import required modules
 import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper/modules";
+import Button from "./Button";
 
 export default function Slider() {
   return (
@@ -20,7 +21,7 @@ export default function Slider() {
         navigation={true}
         mousewheel={true}
         keyboard={true}
-        loop={true} 
+        loop={true}
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
@@ -33,14 +34,18 @@ export default function Slider() {
       >
         <SwiperSlide>
           <div className="slider-banner banner1">
-            
             <div className="hero-area">
-            <h2 className="mb-3">Welcome To <span className="text-green-700 font-bold">ARTECHIT</span> </h2>
+              <h2 className="mb-3">
+                Welcome To <span className="font-bold">ARTECHIT</span>{" "}
+              </h2>
               <h1 className="text-5xl font-bold">
-              Unlock Your Potential with Expert IT Training
+                Unlock Your Potential with Expert IT Training
               </h1>
               <p>Now a Days Internet Is a Useful Thing, Not Passion</p>
-              <button>GET More</button>
+              <div className="flex items-center gap-4">
+                 <Button children={'Course Details'} /> 
+                 <Button children={'Contact US'} /> 
+              </div>
             </div>
           </div>
         </SwiperSlide>
