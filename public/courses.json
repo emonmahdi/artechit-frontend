@@ -6,7 +6,9 @@
         "img": "https://livi.wpengine.com/wp-content/uploads/2024/10/category-image-06.jpg",
         "price":5000,
         "courses":2,
-        "mentor":"Arif Hossain"
+        "mentor":"Arif Hossain",
+        "rating":"4",
+        "classes": 40
     },
     {
         "id":2,
@@ -15,7 +17,9 @@
         "img": "https://livi.wpengine.com/wp-content/uploads/2024/10/category-image-08.jpg",
         "price":5000,
         "courses":2,
-        "mentor":"Arif Hossain"
+        "mentor":"Arif Hossain",
+        "rating":"4.4",
+        "classes": 40
     },
     {
         "id":3,
@@ -24,7 +28,9 @@
         "img": "https://livi.wpengine.com/wp-content/uploads/2024/10/category-image-07.jpg",
         "price":5000,
         "courses":2,
-        "mentor":"Arif Hossain"
+        "mentor":"Arif Hossain",
+        "rating":"5",
+        "classes": 40
     },
     {
         "id":4,
@@ -33,6 +39,8 @@
         "img": "https://livi.wpengine.com/wp-content/uploads/2024/10/category-image-08.jpg",
         "price":5000,
         "courses":2,
-        "mentor":"Arif Hossain"
+        "mentor":"Arif Hossain",
+        "rating":"4.6",
+        "classes": 40
     }
 ]
