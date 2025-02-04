@@ -1,5 +1,6 @@
 import React from "react";
 import { FaLinkedin, FaGithub, FaTwitter } from 'react-icons/fa';
+import SectionTitle from "./ui/SectionTitle";
 
 const teamMembers = [
   {
@@ -59,7 +60,8 @@ const teamMembers = [
 const TeamMember = () => {
   return (
     <div className="container mx-auto py-12">
-      <h2 className="text-3xl text-center font-semibold mb-8">Meet Our Team</h2>
+        <SectionTitle title={'Meet Our Team'} />
+      {/* <h2 className="text-3xl text-center font-semibold mb-8">Meet Our Team</h2> */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
         {teamMembers?.map((member) => {
           const { name, role, details } = member;
